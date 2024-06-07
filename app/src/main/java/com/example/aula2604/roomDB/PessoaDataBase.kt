@@ -9,5 +9,5 @@ import androidx.room.RoomDatabase
 )
 
 abstract class PessoaDataBase: RoomDatabase() {
-    abstract fun pessoaDao(): PessoaDao /*fazendo a conexão com um arquivo na mesma pasta, o 'PessoaDao'*/
+    abstract fun pessoaDao(): PessoaDao //fazendo a conexão com um arquivo na mesma pasta, o 'PessoaDao'
 }
