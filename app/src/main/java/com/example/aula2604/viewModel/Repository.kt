@@ -12,5 +12,5 @@ class Repository(private val db: PessoaDataBase) {
         db.pessoaDao().deletePessoa(pessoa)
     }
 
-    fun getAllPessoa() = db.pessoaDao().getAllPessoa()
+    fun getAllPessoa() = db.pessoaDao().getAllPessoa() /* pega todos os registro dentro da tabela 'Pessoa', com o arquivo 'PessoaDao' */
 }
