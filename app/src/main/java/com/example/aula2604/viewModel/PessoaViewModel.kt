@@ -11,13 +11,13 @@ class PessoaViewModel(private val repository: Repository): ViewModel() {
 
     fun upsertPessoa(pessoa: Pessoa){
         viewModelScope.launch {
-            repository.upsertPessoa(pessoa)
+            repository.upsertPessoa(pessoa) /* vai no repósitorio e insere ou atualiza tal registro fornecido*/
         }
     }
 
     fun deletePessoa(pessoa: Pessoa) {
         viewModelScope.launch {
-            repository.deletePessoa(pessoa)
+            repository.deletePessoa(pessoa) /* vai no repósitorio e deleta tal registro fornecido */
         }
     }
 }
