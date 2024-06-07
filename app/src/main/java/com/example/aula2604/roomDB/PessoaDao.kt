@@ -18,5 +18,6 @@ interface PessoaDao {
 
     @Query("SELECT * FROM pessoa") 
     /* por não ter um código próprio em kotlin, é preciso digitar os códigos manualmente em sql */
-    fun getAllPessoa(): Flow<List<Pessoa>> /* pega todos os registros inseridos e lsita eles em uma tabela */
+    fun getAllPessoa(): Flow<List<Pessoa>> 
+    /* pega todos os registros inseridos e lista eles em uma tabela */
 }
