@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
     }
     /* o código acima, representa a váriavel privada do banco de dados, da tabela pessoa, fazendo a conexão com esse banco para esse arquivo em questão, possibilitando o uso para fornecer dados por meio do formulário, codificado nesse arquivo*/
 
-    private val viewModel by viewModels<PessoaViewModel>(
+    private val viewModel by viewModels<PessoaViewModel>( /* cria uma váriavel conforme o arquivo em outra pasta, o 'PessoaViewModel', para ser utilizado nesse arquivo */
         factoryProducer = {
             object : ViewModelProvider.Factory{
                 override fun <T: ViewModel> create(modelClass: Class<T>): T{
