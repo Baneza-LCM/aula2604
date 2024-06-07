@@ -218,14 +218,14 @@ fun App(viewModel: PessoaViewModel, mainActivity: MainActivity){
                             .fillMaxWidth(0.5f),
                         Arrangement.Center
                     ) {
-                        Text(text = "${pessoa.nome}")
+                        Text(text = "${pessoa.nome}") /* é visualizado o registro digitado anteriomente no campo 'nome' */
                     }
                     Column(
                         Modifier
                             .fillMaxWidth(0.5f),
                         Arrangement.Center
                     ) {
-                        Text(text = "${pessoa.telefone}")
+                        Text(text = "${pessoa.telefone}") /* é visualizado o registro digitado anteriormente no campo 'telefone' */
                     }
                 }
                 Divider()
