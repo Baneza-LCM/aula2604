@@ -5,9 +5,9 @@ import androidx.room.RoomDatabase
 
 @Database(
     entities =[Pessoa::class],
-    version = 1
+    version = 1 /* versão do banco de dados */
 )
 
 abstract class PessoaDataBase: RoomDatabase() {
-    abstract fun pessoaDao(): PessoaDao
+    abstract fun pessoaDao(): PessoaDao /* fazendo a conexão com um arquivo na mesma pasta, o 'PessoaDao' */
 }
