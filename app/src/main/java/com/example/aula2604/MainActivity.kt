@@ -48,6 +48,7 @@ class MainActivity : ComponentActivity() {
             "pessoa.db"
         ).build()
     }
+    /* o código acima, representa a váriavel privada do banco de dados, da tabela pessoa, fazendo a conexão com esse banco para esse arquivo em questão, possibilitando o uso para fornecer dados por meio do formulário, codificado nesse arquivo*/
 
     private val viewModel by viewModels<PessoaViewModel>(
         factoryProducer = {
@@ -89,6 +90,7 @@ fun App(viewModel: PessoaViewModel, mainActivity: MainActivity){
         nome,
         telefone
     )
+    /* as váriaves acima, são os dados da tabela Pessoa, para puxar os dados colocados no formulário feito e enviar para o banco, sem ter o erro dos dados dos registros estarem com outro nome e o banco não reconhecer. */
 
     var pessoaList by remember {
         mutableStateOf(listOf<Pessoa>())
@@ -170,6 +172,7 @@ fun App(viewModel: PessoaViewModel, mainActivity: MainActivity){
                     viewModel.upsertPessoa(pessoa)
                     nome = ""
                     telefone = ""
+                    /* envia o novo registro e atualiza ao mesmo tempo, tendo duas funções em uma palavra de código */
                 }
             ) {
                 Text(text = "Cadastrar")
@@ -206,7 +209,7 @@ fun App(viewModel: PessoaViewModel, mainActivity: MainActivity){
                     Modifier
                         .clickable {
                             viewModel.deletePessoa(pessoa)
-                        }
+                        } /* o deletePessoa exclui o registro na qual o usuário clicar na opção de deletar tal registro, fazendo a ligação com o banco para que exclua tal registro de tal coluna. */
                         .fillMaxWidth(),
                     Arrangement.Center
                 ){
