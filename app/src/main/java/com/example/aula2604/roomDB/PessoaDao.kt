@@ -10,11 +10,13 @@ import kotlinx.coroutines.flow.Flow
 interface PessoaDao {
 
     @Upsert
-    suspend fun upsertPessoa(pessoa: Pessoa) /* duas funções em um único código, representando o inserir e atulizar */
+    suspend fun upsertPessoa(pessoa: Pessoa) 
+/* duas funções em um único código, representando o inserir e atulizar */
 
     @Delete
     suspend fun deletePessoa(pessoa: Pessoa)
 
-    @Query("SELECT * FROM pessoa") /* por não ter um código próprio em kotlin, é preciso digitar os códigos manualmente em sql */
+    @Query("SELECT * FROM pessoa") 
+    /* por não ter um código próprio em kotlin, é preciso digitar os códigos manualmente em sql */
     fun getAllPessoa(): Flow<List<Pessoa>> // pega todos os registros inseridos e lsita eles em uma tabela
 }
