@@ -68,7 +68,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    var room_version = "2.5.0"
+    var room_version = "2.5.0" /* identifica a versão do banco que será utilizado, e abaixo, o código das implementações que é utilizado para codificar o banco de dados dentro do kotlin */
     ksp("androidx.room:room-compiler:$room_version")
     implementation("androidx.room:room-ktx:$room_version")
 
